@@ -1,0 +1,97 @@
+:root{
+    --primario: #FC5800;
+    --blanco: #FFFFFF;
+    --gris:#808080;
+}
+html {
+    font-size: 62.5%;
+    font-family: roboto;
+    /* =10px */
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--gris);
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 120rem;
+    margin: 20rem auto;
+}
+
+.card {
+    background-color: var(--blanco);
+    box-shadow: .5rem .5rem .5rem rgba(0, 0, 0, 0.9);
+    border-radius: 1.5rem;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+
+.card:hover {
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba (0, 0, 0, 0.6);
+}
+
+.card__image {
+    height: 30rem;
+    border: 2.5rem 2.5rem 0 0;
+} 
+
+.card__texto {
+    margin: 3rem;
+}
+
+.texto__fecha {
+    font-size: 1.5rem;
+    color: var(--primario);
+    font-weight: 700;
+}
+
+.texto__titulo {
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+.texto__parrafo {
+    font-weight: 300;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--gris);
+}
+
+.card__estado {
+    background: var(--primario);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 10rem;
+    color: var(--blanco);
+}
+
+.estado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-right: 2px solid var(--blanco);
+}
+.estado:last-child{
+    border-right: none;
+}
+
+.estado__valor {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
